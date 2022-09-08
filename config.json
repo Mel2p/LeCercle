@@ -13,8 +13,8 @@
     "title": "Le Cercle"
   },
   "legend": {
-    "edgeLabel": "Lien",
-    "colorLabel": "Groupe",
+    "edgeLabel": "Liens",
+    "colorLabel": "Groupes",
     "nodeLabel": "Personnes"
   },
   "features": {
