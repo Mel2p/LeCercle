@@ -575,3 +575,16 @@ cursor: pointer;
 display: none;
 }
 
+#slider-weight-panel {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.slider-input {
+	float: left;	
+}
+
+.slider-value {
+	float: left;
+	margin-left: 15px;
+}
