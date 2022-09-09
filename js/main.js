@@ -420,6 +420,7 @@ function Cluster(a) {
 }
 function showGroups(a) {
     a ? ($GP.intro.find("#showGroups").text("Hide groups"), $GP.bg.show(), $GP.bg2.hide(), $GP.showgroup = !0) : ($GP.intro.find("#showGroups").text("View Groups"), $GP.bg.hide(), $GP.bg2.show(), $GP.showgroup = !1)
+    refreshEdgeBySliderWeight();
 }
 
 function nodeNormal() {
@@ -606,6 +607,7 @@ function showCluster(a) {
             var d = sigInst._core.graph.nodesIndex[b[c]];
             !0 == d.hidden && (e.push(b[c]), d.hidden = !1, d.attr.lineWidth = !1, d.attr.color = d.color, f.push('<li class="membership"><a href="#'+d.label+'" onmouseover="sigInst._core.plotter.drawHoverNode(sigInst._core.graph.nodesIndex[\'' + d.id + "'])\" onclick=\"nodeActive('" + d.id + '\')" onmouseout="sigInst.refresh()">' + d.label + "</a></li>"))
         }
+        refreshEdgeBySliderWeight();
         sigInst.clusters[a] = e;
         sigInst.draw(2, 2, 2, 2);
         $GP.info_name.html("<b>" + a + "</b>");
@@ -615,6 +617,8 @@ function showCluster(a) {
         $GP.info.animate({width:'show'},350);
         $GP.search.clean();
 		$GP.cluster.hide();
+
+        refreshEdgeBySliderWeight();
         return !0
     }
     return !1
